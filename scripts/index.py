@@ -6,7 +6,7 @@ import pandas as pd
 def app():
 
     with st.spinner("Loading"):
-        gender = st.sidebar.selectbox('gender',('Male','Female'))
+        
         def user_input_features():
             gender = st.sidebar.selectbox('gender',('Male','Female'))
 
