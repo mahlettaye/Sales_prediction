@@ -12,7 +12,7 @@ jobs:
         run: |
 
           # Your ML workflow goes here
-          python model.py
+          python scripts/model.py
 
           # Write your CML report
           cat results.txt >> report.md
