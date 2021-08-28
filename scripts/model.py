@@ -37,8 +37,8 @@ class Modeling:
     def data_spliter (df):
 
         selected_data = df[['Customers','StoreType','CompetitionDistance','Store','Promo','Promo2SinceWeek']]
-        X=selected_data[:1000]
-        Y=df['Sales'][:1000]
+        X=selected_data
+        Y=df['Sales']
         return X, Y
 
     def train (self):
@@ -167,8 +167,8 @@ class Modeling:
 
 
 if __name__ =="__main__":
-    model_obj= Modeling("data/RF_train.csv")
-    data=model_obj.read_csv("data/RF_train.csv")
+    model_obj= Modeling("data/training.csv")
+    data=model_obj.read_csv("data/training.csv")
  
    # model_obj.train_mlflow(data)
     model_obj.train_mlflow_RF(data)
