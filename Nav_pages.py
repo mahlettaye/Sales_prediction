@@ -1,14 +1,18 @@
+import sys
+sys.path.insert(0, '/home/mahlet/10ac/Sales_prediction/')
 import streamlit as st 
-import awesome_streamlit as ast
-import index
-import data_viz
+
+from pages import index
+from pages import data_viz
+from pages import prediction
 
 
 
 #Navigation to the pages 
 PAGES={
-    "Index":index,
-    "Data Visualization": data_viz
+    
+    "Data Visualization": data_viz,
+    "Prediction":prediction
 } 
 
 

@@ -17,12 +17,12 @@ def read_csv (filename):
         
         return data
 
-def load(scaler_path, model_path):
-    sc = joblib.load(scaler_path)
+def load(model_path):
+   
     model = joblib.load(model_path)
-    return sc , model
+    return model
 
-def inference(scaler, model, df):
+def inference(model, df):
     df=df.drop(['Unnamed: 0'], axis=1)
     df=df[['Customers','StoreType','CompetitionDistance','Store','Promo','Promo2SinceWeek']]
         #df = pd.DataFrame([row], columns = feat_cols)
@@ -46,7 +46,7 @@ def app ():
             st.dataframe(test.head(20))
             sample=test[:5]
             if (st.button('Predict')):
-                model = load('rfmodel.joblib')
+                model = load('Xmodel.joblib')
                 result = inference(model, sample)
                
                 st.dataframe(result)
