@@ -17,7 +17,7 @@ def app():
 
 
     #Reading the data
-    training_sample_subset=pd.read_csv("data/RF_train.csv")
+    training_sample_subset=pd.read_csv("data/training.csv")
 
 
     #display the data as a table
