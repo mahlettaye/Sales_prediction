@@ -1,0 +1,15 @@
+artifact_uri: file:///home/mahlet/10ac/Sales_prediction/mlruns/1/182c47019ca144699e33918e8ac6f836/artifacts
+end_time: 1630143536716
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: 182c47019ca144699e33918e8ac6f836
+run_uuid: 182c47019ca144699e33918e8ac6f836
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1630143536542
+status: 3
+tags: []
+user_id: mahlet

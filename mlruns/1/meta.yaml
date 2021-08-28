@@ -1,0 +1,4 @@
+artifact_location: file:///home/mahlet/10ac/Sales_prediction/mlruns/1
+experiment_id: '1'
+lifecycle_stage: active
+name: dvc_RFR
