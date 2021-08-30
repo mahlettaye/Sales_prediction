@@ -14,9 +14,9 @@ jobs:
 
           pip install -r requirements.txt
           # Your ML workflow goes here
-          cd scripts 
-          python model.py
+          #cd scripts 
+          #python model.py
           
-          cd ..
+          
           cat logistic_regression_metrics.txt >> report.md
           cml-send-comment report.md
