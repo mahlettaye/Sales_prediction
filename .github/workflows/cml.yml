@@ -17,7 +17,5 @@ jobs:
           #cd scripts 
           #python model.py
 
-          # Write your CML report
-        
-          cat logistic regression_metrics.txt >> report.md
+          cat logistic_regression_metrics.txt >> report.md
           cml-send-comment report.md
