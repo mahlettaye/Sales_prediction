@@ -26,3 +26,5 @@ For this project we have used kaggle dataset found here https://www.kaggle.com/c
 
 
 ### Link to deployed dashboard 
+
+    https://rossmann-sales-forecast.herokuapp.com/
