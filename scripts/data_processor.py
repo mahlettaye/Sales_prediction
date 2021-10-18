@@ -2,11 +2,13 @@ import sys
 import os
 #sys.path.insert(0, '/home/mahlet/10ac/Sales_prediction/data/')
 sys.path.append(os.path.abspath(os.path.join('..')))
+from scripts.sales_logger import logghandler
 import pandas as pd
 import numpy as np
 import random
 
-
+logger=logghandler('test','saleslog')
+user_logger= logger.get_logger("DEBUG")
 
 class DataProcessor:
 
@@ -25,7 +27,8 @@ class DataProcessor:
             self.data= pd.read_csv(filename)
         
         except FileNotFoundError as e:
-            print ("unable to open")
+            
+            user_logger.info("unable to open")
         
         return self.data
     
@@ -63,8 +66,11 @@ class DataProcessor:
         """
 
         df = df.isnull().sum()
-
-        return df
+        try:
+            return df
+        except ValueError:
+            return None
+       
     
     def  change_date(df1,df2):
         """
