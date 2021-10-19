@@ -27,14 +27,15 @@ class DataCleaner :
         train_df = DataProcessor.drop_cols(df1)
         test_df = DataProcessor.drop_cols(df2)
         train_df,test_df = DataProcessor.handdle_missing_values(train_df,test_df)
-        print(train_df.info())
+        
         return train_df,test_df
 
     def month_convertor (self):
         train_df,test_df = DataCleaner.get_data(self.train_data,self.test_data,self.store_data)
         train_df,test_df = DataCleaner.process_df(train_df, test_df)
         train_df['Month'] =  train_df['Month'].apply(lambda x: calendar.month_abbr[x])
-        print (train_df['Month'])
+        #print (train_df['Month'])
+        return train_df,test_df
         
 
 
